@@ -15,7 +15,6 @@ URL:		http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 "Class::Spiffy" is a framework and methodology for doing object oriented (OO)
