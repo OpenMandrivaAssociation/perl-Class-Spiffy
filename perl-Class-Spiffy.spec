@@ -1,7 +1,7 @@
 %define	module	Class-Spiffy
 %define	name	perl-%{module}
 %define	version	0.15
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 
 Version:	%{version}
 Name:		%{name}
