@@ -1,21 +1,21 @@
-%define	module	Class-Spiffy
-%define	name	perl-%{module}
-%define	version	0.15
-%define	release	%mkrel 4
+%define	upstream_name	 Class-Spiffy
+%define	upstream_version 0.15
 
-Version:	%{version}
-Name:		%{name}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Spiffy Perl Interface Framework For You
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/I/IN/INGY/%{module}-%{version}.tar.bz2
-URL:		http://search.cpan.org/dist/%{module}/
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/I/IN/INGY/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 "Class::Spiffy" is a framework and methodology for doing object oriented (OO)
@@ -25,7 +25,7 @@ fix all the nits and warts of traditional Perl OO, in a clean, straightforward
 and (perhaps someday) standard way.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -47,4 +47,3 @@ rm -rf %{buildroot}
 %{_mandir}/man*/*
 %{perl_vendorlib}/Class/Spiffy.pm
 %{perl_vendorlib}/Class/Spiffy/*
-
