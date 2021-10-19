@@ -21,21 +21,21 @@ fix all the nits and warts of traditional Perl OO, in a clean, straightforward
 and (perhaps someday) standard way.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make 
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
 %{perl_vendorlib}/Class/Spiffy.pm
 %{perl_vendorlib}/Class/Spiffy/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
