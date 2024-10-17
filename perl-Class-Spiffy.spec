@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	17
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://search.cpan.org/CPAN/authors/id/I/IN/INGY/%{upstream_name}-%{upstream_version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl(inc::Module::Install)
