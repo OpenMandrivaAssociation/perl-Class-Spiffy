@@ -1,14 +1,14 @@
 %define	upstream_name	 Class-Spiffy
-%define	upstream_version 0.15
+%define	upstream_version 0.27
 
 Summary:	Spiffy Perl Interface Framework For You
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	17
+Version:	%{upstream_version}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/I/IN/INGY/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/Class-Spiffy
+Source0:	https://cpan.metacpan.org/authors/id/I/IN/INGY/Class-Spiffy-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(inc::Module::Install)
