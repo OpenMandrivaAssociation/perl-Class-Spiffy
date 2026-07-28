@@ -1,10 +1,10 @@
 %define	upstream_name	 Class-Spiffy
-%define	upstream_version 0.27
+%define	upstream_version 0.15
 
 Summary:	Spiffy Perl Interface Framework For You
 Name:		perl-%{upstream_name}
 Version:	%{upstream_version}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Class-Spiffy
